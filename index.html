@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datathon Project 2025</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <link rel = "stylesheet" href="assets\css\style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">MTA Datathon 2025</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#footer">Credits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-image">
+                    <a href = "https://www.mta.info/open-data   " target="_blank">
+                    <img src ="assets\images\mtaLogo.png" alt = "logo" width = "80vh" height = "80vh">
+                    </a>
+                </div>
+                <div class="hero-text">
+                    <h1>Datathon Project 2025</h1>
+                    <p>Uncovering Transit Insights Through Advanced Data Analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Introduction -->
+        <section class="intro" id="about">
+            <div class="container">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="intro-content">
+                        <div class="intro-text">
+                            <p>The Automated Camera Enforcement (ACE) program is a bus-mounted camera system that
+                                monitors and issues violations to vehicles that blocks bus lanes and routes. The
+                                purpose of the ACE program is to improve bus speeds and reliability by reducing the 
+                                possible obstructions.
+                            </p>
+                            <br>
+                            <p> 
+                                Due to the large amounts of data in the MTA ACE Violations dataset, we decided to
+                                narrowed our data down to focus on the occurences within the Manhathan's Central Business District
+                                (CBD) zone which 
+                                also covers the congestion pricing zone. Congestion pricing went into effect
+                                January 5, 2025
+                            </p>
+                            <br>
+                            <p>
+                                In this project, we examine the effects of congestion pricing on 
+                                the number of ACE violations for exempt vehicles, and breaking it down
+                                by monthly trends as well as locations. We also explore the effects of 
+                                congestion pricing on bus speeds as well as CitiBike ridership.
+                            </p>                      
+                    </div>
+                    <div class="intro-highlights">
+                        <div class = "introTitle">
+                            <h3>Team's Highlights</h3>
+                        </div>
+                        <div class="highlight-item">
+                            <div>
+                                <strong>Saajid</strong>
+                                <p>I learned more about how we deal with data in the world / how we can put it to good use, and improved my website development skills. Learning about MTA Open Data and visualizing the problems at hand using tools like IPYNB and HTML helped me grasp a better understanding of Data Science as a whole. I enjoyed my time collaborating with others who had a better grasp of data than I did and learning from their insights!</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div>
+                                <strong>Akram</strong>
+                                <p>An insight I've gained is weirdly from the data it seems there was a much larger amount of exempt vehicles post-congestion pricing than before.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div>
+                                <strong>Kathleen</strong>
+                                <p>By participating in this Datathon, I got to work with amazing people and learned how to collaborate, divide tasks and be punctual with our schedule. I enjoyed sharing ideas with my team! I like how we can connect one set of different data to another, I am hoping in the future we can improve our data analytics skills with large datasets like this too.</p>
+                            </div>
+                            </div>
+                        <div class="highlight-item">
+                            <div>
+                                <strong>Jin</strong>
+                                <p>I have been curious about data science as a field, this project is an amazing experience. I'm so glad to be able to working on this project with talented people and learn so much from each other!</p>
+                            </div>
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis Section 1 -->
+        <section id="analysis">
+                <div class="analysis-section fade-in">
+                    <h3 class="analysis-title">Analysis on Exempt Vehicle Count 🚑 🚒 🚓</h3>
+                    <div class="analysis-content">
+                        <p>
+                            We focused on the ACE violations of exempt vehicles before and after the implementation
+                            of congestion pricing. We first separated Manhathan buses from the dataset that contained buses throughout
+                            the boroughs which we then found the amount of exempt vehicle violations that has been recorded by ACE.
+                            We separated this dataset into two, before the implementation of congestion pricing and after to get a better
+                            picture of ACE's role in our bus system.
+                        </p>
+                    </div>
+
+                    <div class="charts-container">
+                        <div class="chart-placeholder has-image" onclick="openImageModal('placeholder1')">
+                            <img src="\assets\images\exempt_vehicle_count.png" alt="Graph of Exempt Vehicle Count" class="chart-image"/>
+                            <div class="chart-overlay">
+                                <div class="chart-title">Graph of Exempt Vehicle Count</div>
+                                <div class="chart-description" >This is a bar graph representing the exempt vehicle count for each exempt vehicle type.</div>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder has-image" onclick="openImageModal('placeholder2')">
+                            <img  src="assets\images\exempt_by_location.png" alt="Depicting Exemptions by Location" class = "chart-image"/>
+                            <div class="chart-overlay">
+                                <div class="chart-title" >Exemptions by Location</div>
+                                <div class="chart-description" >This is a bubble scatter plot that represents latitude and longitude coordinates to show the distribution of violation status by location.</div>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder has-image" onclick="openImageModal('placeholder5')">
+                            <img src="\assets\images\exempt_pre_congestion.png" alt="Graph of Exempt Vehicle Count" class="chart-image"/>
+                            <div class="chart-overlay">
+                                <div class="chart-title">Pre-Congestion Graph</div>
+                                <div class="chart-description" >This is a bar graph showing the exempt vehicle violations pre-congestion pricing </div>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder has-image" onclick="openImageModal('placeholder6')">
+                            <img src="\assets\images\exempt_post_congestion.png" alt="Graph of Exempt Vehicle Count" class="chart-image"/>
+                            <div class="chart-overlay">
+                                <div class="chart-title">Post-Congestion Graph</div>
+                                <div class="chart-description" >This is a bar graph showing the exempt vehicle violations post-congestion pricing</div>
+                            </div>
+                        </div>
+                        <div class = "heatMapLink">To view the locations on a map, click this <a href="data/violations_map.html">link!</a></div>
+                    </div>
+
+                    <div class="insights-panel">
+                        <h4 class="insights-title">Key Insights</h4>
+                        <ul class="insights-list">
+                            <li>
+                                Emergency vehicles make up the majority of the exempt vehicle violations. This data 
+                                includes medical, law enforcement, and fire vehicles.
+                            </li>
+                            <li>
+                                Using the map, we took note of exempt vehicle violation clusters. 
+                                For example, there is a dense patch at 2nd Ave, between East
+                                22nd and 23rd street that is made up by emergency vehicles. We conclude that
+                                this is likely due to the hospitals in the area. 
+                            </li>
+                            <li>
+                                We have around 23 months of data before congestion pricing. 
+                                On average, there is around 5,360 violations from exempt vehicles per month.
+                                So far, we have 7 months of data after the implementation of congestion pricing. 
+                                On average, there is around 24,219 violations from exempt vehicles per month.
+                            </li>    
+                            <li>
+                                The ratio for the parantransit and "other" exempt vehicles stayed relatively consistent 
+                                pre and post congestion pricing. While pre-congestion emergency vehicles were far in the lead, 
+                                post-congestion it was much more similar to a 1:1 ratio for emergency vehicles compared to commercial
+                                vehicles, each made up about 1/3 of the occurences.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="analysis-section fade-in">
+                    <h3 class="analysis-title">Analysis on MTA Bus Speed in CBD 🚌</h3>
+                    <div class="analysis-content">
+                        <p> 
+                            We compared the bus speeds in Manhattan's CBD zone before and after the implementation of congestion pricing
+                            to get an better idea which routes gained speed and which stayed the same.
+                            We focused on specific buses that would be traveling in or through the CBD zone to narrow down our dataset.
+                        </p>
+                    </div>
+                    
+                    <div class="charts-container" id="oneCharts-container">
+                        <div class="chart-placeholder has-image" onclick="openImageModal('placeholder4')">
+                            <img src="/assets/images/bus_speed.png" alt="description" class="chart-image">
+                            <div class="chart-overlay">
+                                <div class="chart-title" >Bus Speed Depiction</div>
+                                <div class="chart-description" > This graph shows bus speed pre and post congestion pricing for numerous buses traveling through and in the CBD zone. </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insights-panel">
+                        <h4 class="insights-title">Key Insights</h4>
+                        <ul class="insights-list">
+                            <li>
+                                Most bus routes speed were either maintained or slightly faster after congestion pricing. Bus routes like M101 and M2 stayed relatively similar while M23+, M14+, M23+, and M34+ gained speed, suggesting congestion pricing did not slow buses down. 
+                            </li>
+                            <li>
+                                M14A+ stands out as it recorded a significant increase in speed compared to before congestion pricing. This suggest that M14A+ routes which runs primarily along 34th Street in Midtown, benefited from reduced east-west traffic congestion. 
+                            </li>
+                            <li>
+                                After congestion pricing, the difference between the slowest route, M42 and the fastest M14A+ became sharper. Routes that have a strong priority features benefited more while routes without those feaures saw little to no change.
+                            </li>
+                            <li>
+                                Congestion pricing on its own isn't enough, with an improvement of stronger bus lanes and better enforcement will ensure all routes not just few will experience smoother and reliable service.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="analysis-section fade-in">
+                    <h3 class="analysis-title">Possible Analysis on CitiBike Ridership 🚴</h3>
+                    <div class="analysis-content">
+                        <p>
+                            After examining our datasets, we see CitiBike ridership as an area for future analysis with more data needed 
+                            for further analysis. We hypothesized that with ACE, bus lanes are overall clearer allowing for faster 
+                            traffic flow in the CBD zone which makes it more appealing and safer for bikers on the road. 
+                        </p>
+                    </div>
+                    
+                    <div class="charts-container" id = "oneCharts-container">
+                        <div class="chart-placeholder has-image" onclick="openImageModal('placeholder3')">
+                            <img src="/assets/images/bike_graph.jpg" alt="Depiction of bike ridership from January 2024 to January 2025" class="chart-image">
+                            <div class="chart-overlay">
+                                <div class="chart-title" >Bike Ridership Map</div>
+                                <div class="chart-description" >This is a map that depicts bike ridership from January 2024 to January 2025</div>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder has-image" onclick="openImageModal('placeholder7')">
+                            <img src="/assets/images/citibike_speed.png" alt="Table of Citibike Speed" class="chart-image">
+                            <div class="chart-overlay">
+                                <div class="chart-title" >CitiBike Speed</div>
+                                <div class="chart-description" >This table depicts the bike speeds between the CBD zone and non-CBD areas from January 2024 to January 2025</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insights-panel">
+                        <h4 class="insights-title">Key Insights</h4>
+                        <ul class="insights-list">
+                            <li> Comparing the data from January 2024 to January 2025, there is a 
+                                lot more citibike ridership in CBD zone after congestion pricing 
+                            </li>
+                            <li>
+                                We compared bike speeds in non-CBD areas and the CBD zone to see the difference 
+                                within a year. Through this, we see that there is a 
+                                significant increase from 2024 to 2025 for bike speeds in the CBD zone compared 
+                                to non-CBD areas.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+        <section id ="resources">
+            <div class="analysis-section fade-in">
+                <h3 class="analysis-title">Resources</h3>
+                <div class="insights-panel">
+                    <h4 class="insights-title">Data Collection</h4>
+                    <ul class="insights-list">
+                            <li> 
+                                <a href = "data/analysis.html">Monthly Violations IPYNB (Analysis)</a>
+                            </li>
+                            <li>
+                                <a href="data/exempt_vehicle_Analysis.html">Exempt Vehicle IPYNB (Analysis)</a>
+                            </li>
+                            <li>
+                                <a href="data/bus_speed_Analysis.html">Bus Speed IPYNB (Analysis)</a>
+                            </li>
+                            <li> 
+                                <a href="data/citibike_Analysis.html">Citibike IPYNB (Analysis)</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id ="footer">
+        <div class="container">
+            <p>&copy; MTA Datathon 2025 Project by 
+                <a href = "https://github.com/jiyuua" target = "_blank">Jin</a>,
+                <a href = "https://github.com/abdonkath" target = "_blank">Kathleen</a>, 
+                <a href = "https://github.com/Ayon1113" target = "_blank">Akram</a> and 
+                <a href = "https://github.com/salwajid81" target = "_blank">Saajid</a>
+            </p>
+        </div>
+    </footer>
+    
+    <!--MADE SO IMAGE CAN POP UP WHEN CLICKED-->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal(event)">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeImageModal(event)">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="" />
+            <div id="modalInfo" class="modal-info">
+                <div id="modalTitle" class="modal-title"></div>
+                <div id="modalDescription" class="modal-description"></div>
+            </div>
+            <button id="toggleButton" class="modal-toggle-button" onclick="event.stopPropagation(); toggleModalInfo();">
+                <span class="toggle-icon">ℹ️</span>
+                <span id="toggleText">Hide Info</span>
+            </button>
+        </div>
+    </div>
+    <script src = "assets\js\script.js"></script>
+</body>
+</html>
