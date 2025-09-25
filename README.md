@@ -5,4 +5,6 @@ In this project, we examine the effects of congestion pricing on the number of A
 
 **DataVengers: Saajid Al Wajid,  Mari Kathleen Abdon, Akram Uddin, Jin Wang**
 
-[Click to watch our project explanation video](assets/images/video1158377612.mp4)
+https://github.com/user-attachments/assets/b5ca9a3e-1f0b-4cac-9a84-60c970c60e66
+
+[Or download it here!](assets/images/video1158377612.mp4)
